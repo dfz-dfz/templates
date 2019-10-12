@@ -1,0 +1,90 @@
+/*
+* @Author: dfz
+* @Date:   2019-10-10 11:49:55
+* @Last Modified by:   dell
+* @Last Modified time: 2019-10-10 11:50:24
+*/
+* {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #F5F5F5;
+    min-width: 320px;
+}
+
+header {
+    height: 3.2rem;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 54, 87, 1)), to(rgba(236, 102, 49, 1)));
+    background: -webkit-linear-gradient(right, rgba(255, 54, 87, 1), rgba(236, 102, 49, 1));
+    background: -moz-linear-gradient(right, rgba(255, 54, 87, 1), rgba(236, 102, 49, 1));
+    background: linear-gradient(270deg, rgba(255, 54, 87, 1), rgba(236, 102, 49, 1));
+    -moz-border-radius: 0 0 0 .48rem;
+    border-radius: 0 0 0 .48rem;
+}
+
+header .title {
+    padding-top: 1.1rem;
+    font-size: .44rem;
+    color: #fff;
+    font-weight: 500;
+    padding-left: .64rem;
+}
+
+header .text {
+    padding-top: .2rem;
+    font-size: .26rem;
+    color: #fff;
+    font-weight: 500;
+    padding-left: .64rem;
+    opacity: .5;
+}
+
+section {
+    font-size: 0;
+    padding: .3rem .32rem;
+}
+
+section .type_box {
+    background-color: #fff;
+    width: -moz-calc(100% - .84rem);
+    width: calc(100% - .84rem);
+    height: .8rem;
+    -moz-border-radius: .16rem;
+    border-radius: .16rem;
+    padding: .4rem;
+    position: relative;
+    margin-top: .32rem;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+section .type_box::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/next.png');
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: .12rem;
+    height: .2rem;
+    top: 50%;
+    margin-top: -.1rem;
+    right: .32rem;
+}
+
+section .type_box img {
+    width: .8rem;
+    height: .8rem;
+    vertical-align: middle;
+    margin-right: .22rem;
+}
+
+section .type_box p {
+    font-size: .32rem;
+    color: #000;
+    vertical-align: middle;
+    display: inline-block;
+}

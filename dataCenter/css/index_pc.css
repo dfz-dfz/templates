@@ -1,0 +1,105 @@
+/*
+* @Author: dfz
+* @Date:   2019-10-09 18:03:43
+* @Last Modified by:   dell
+* @Last Modified time: 2019-10-10 11:52:54
+*/
+* {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #F5F5F5;
+    min-width: 500px;
+}
+
+header {
+    width: 100%;
+    height: 160px;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 54, 87, 1)), to(rgba(236, 102, 49, 1)));
+    background: -webkit-linear-gradient(right, rgba(255, 54, 87, 1), rgba(236, 102, 49, 1));
+    background: -moz-linear-gradient(right, rgba(255, 54, 87, 1), rgba(236, 102, 49, 1));
+    background: linear-gradient(270deg, rgba(255, 54, 87, 1), rgba(236, 102, 49, 1));
+    -moz-border-radius: 0px 0px 0px 48px;
+    border-radius: 0px 0px 0px 48px;
+}
+
+header .title {
+    padding-top: 46px;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 500;
+    padding-left: 32px;
+}
+
+header .text {
+    padding-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    padding-left: 32px;
+    opacity: .5;
+}
+
+section {
+    font-size: 0;
+    padding: 30px 32px;
+}
+
+section .type_box {
+    background-color: #fff;
+    width: -moz-calc((100% - 220px)/4);
+    width: calc((100% - 220px)/4);
+    height: 30px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    padding: 30px 20px;
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+	section .type_box {
+    	width: calc((100% - 100px)/2);
+	}
+
+	section a:nth-child(2n) .type_box {
+	    margin-right: 0;
+	}
+}
+
+section a:last-child .type_box {
+    margin-right: 0;
+}
+
+section .type_box::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/next.png');
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 8px;
+    height: 12px;
+    top: 50%;
+    margin-top: -6px;
+    right: 20px;
+}
+
+section .type_box img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+section .type_box p {
+    font-size: 16px;
+    color: #000;
+    vertical-align: middle;
+    display: inline-block;
+}
