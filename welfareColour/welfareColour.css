@@ -1,0 +1,329 @@
+/*
+* @Author: dfz
+* @Date:   2019-10-19 10:00:49
+* @Last Modified by:   dell
+* @Last Modified time: 2019-10-19 13:52:54
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+    background-color: #fff;
+    font-size: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .88rem;
+    z-index: 3;
+}
+
+header .back {
+    position: absolute;
+    height: .35rem;
+    width: .35rem;
+    background-image: url('./images/back.png');
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    left: .32rem;
+    top: 50%;
+    margin-top: -.175rem;
+}
+
+header p {
+    font-size: .36rem;
+    color: #000;
+    font-weight: bold;
+    line-height: .88rem;
+    display: inline-block;
+}
+
+section {
+	margin-top: .88rem;
+	background-color: #2C177D;
+	overflow-x: hidden;
+}
+
+section .top {
+	background-image: url('./images/topBimg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 7.8rem;
+}
+
+section .coupon {
+	background-image: url('./images/coupon.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 2.14rem;
+	width: calc(100% - .64rem);
+	margin: 0 .32rem;
+	border-radius: .16rem;
+	position: relative;
+}
+
+section .coupon .price {
+	position: absolute;
+	left: .4rem;
+	top: 50%;
+	margin-top: -.4rem;
+	font-size: 0;
+}
+
+section .coupon .price .num {
+	font-size: .8rem;
+	color: #333;
+	font-weight: bold;
+	line-height: 1;
+	display: inline-block;
+}
+
+section .coupon .price .txt {
+	font-size: .2rem;
+	color: #333;
+	font-weight: bold;
+	margin-left: .05rem;
+}
+
+section .coupon .tips {
+	font-size: .26rem;
+	color: #333;
+	font-weight: 400;
+	position: absolute;
+	top: .6rem;
+	left: 2.15rem;
+}
+
+section .coupon .label {
+	position: absolute;
+	width: 2.6rem;
+	height: .44rem;
+	line-height: .44rem;
+	border-radius: .1rem;
+	background-color: rgba(255,40,76,.1);
+	font-size: .26rem;
+	color: #FF284C;
+	font-weight: 400;
+	top: 1.05rem;
+	left: 2.1rem;
+	text-align: center;
+}
+
+section .coupon .btn {
+	font-size: .32rem;
+	color: #fff;
+	font-weight: 400;
+	position: absolute;
+	top: .64rem;
+	right: .3rem;
+}
+
+section .coupon .img {
+	width: .34rem;
+	height: .34rem;
+	border-radius: 50%;
+	background-image: url('./images/right.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: .6rem;
+	bottom: .6rem;
+}
+
+section .title_label {
+	width: 3.1rem;
+	height: .72rem;
+	background-image: url('./images/title.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 1.05rem auto 0;
+}
+
+section .shop_box {
+	position: relative;
+	margin-top: .5rem;
+	padding: 0 .32rem;
+	font-size: 0;
+}
+
+section .shop_box::after {
+	content: '';
+	position: absolute;
+	background-image: url('./images/bgBall.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 2.38rem;
+	height: 2.38rem;
+	right: -0.96rem;
+	top: -.6rem;
+	z-index: 1;
+}
+
+section .shop_box::before {
+	content: '';
+	position: absolute;
+	background-image: url('./images/bgBall.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 2.38rem;
+	height: 2.38rem;
+	left: -1.5rem;
+	top: 6.85rem;
+	z-index: 1;
+}
+
+section .shop_box .shop {
+	width: calc((100% - .2rem)/2);
+	height: 5.45rem;
+	background-color: #fff;
+	border-radius: .16rem;
+	margin-right: .2rem;
+	margin-bottom: .2rem;
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+}
+
+section .shop_box .shop:nth-child(2n) {
+	margin-right: 0;
+}
+
+section .shop_box .shop .img_box {
+	position: relative;
+	width: 100%;
+	height: 3.35rem;
+}
+
+section .shop_box .shop .img_box img {
+	width: 100%;
+	height: 100%;
+}
+
+section .shop_box .shop .img_box span {
+	position: absolute;
+	display: inline-block;
+	width: 1.05rem;
+	height: 1.2rem;
+	background-image: url('./images/label.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	top: .12rem;
+	left: .12rem;
+}
+
+section .shop_box .shop .text {
+	font-size: .26rem;
+	color: #000;
+	font-weight: 400;
+	line-height: .36rem;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding: 0 .2rem;
+    margin-top: .2rem;
+}
+
+section .shop_box .shop .give_away {
+	font-size: .24rem;
+	color: #FF284C;
+	font-weight: 400;
+	padding: 0 .2rem;
+	line-height: 1;
+	margin-top: .15rem;
+	margin-bottom: .2rem;
+}
+
+section .shop_box .shop .price_box {
+	color: #FF284C;
+	padding: 0 .2rem;
+	font-size: 0;
+}
+
+section .shop_box .shop .price_box .symbol {
+	font-size: .24rem;
+	font-weight: 400;
+}
+
+section .shop_box .shop .price_box .num {
+	font-size: .32rem;
+	font-weight: bold;
+}
+
+.popup_box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: .88rem;
+    left: 0;
+    z-index: 1000;
+}
+
+.popup_box .masked {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+}
+
+.popup_box .coupon_popup {
+	position: absolute;
+	width: 6.73rem;
+	height: 6.88rem;
+	background-image: url('./images/popup.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	top: 50%;
+	margin-top: -3.44rem;
+	left: 50%;
+	margin-left: -3.37rem;
+}
+
+.popup_box .coupon_popup .price {
+    color: #FF2811;
+    font-size: 0;
+    text-align: center;
+    margin-top: 3.1rem;
+    font-weight: 800;
+    margin-left: -.3rem;
+}
+
+.popup_box .coupon_popup .price .symbol {
+	font-size: .38rem;
+	display: inline-block;
+}
+
+.popup_box .coupon_popup .price .num {
+	font-size: .72rem;
+	display: inline-block;
+}
+
+.popup_box .coupon_popup .btn {
+	width: 2.8rem;
+	height: .65rem;
+	background-image: url('./images/btn.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+    margin-left: -1.25rem;
+}
+
+.popup_box .coupon_popup .close {
+	width: .7rem;
+	height: .7rem;
+	border-radius: 50%;
+	background-image: url('./images/close.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	bottom: -.5rem;
+	left: 50%;
+	margin-left: -.35rem;
+	position: absolute;
+}
