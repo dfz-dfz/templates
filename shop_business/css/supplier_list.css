@@ -1,0 +1,110 @@
+header {
+    border-bottom: 1px solid rgba(232,232,232,.3);
+}
+
+.top_box {
+    position: fixed;
+    top: .88rem;
+    left: 0;
+    width: calc(100% - .64rem);
+    padding: .32rem;
+    background-color: #fff;
+    font-size: 0;
+    z-index: 1000;
+}
+
+.top_box img {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: .08rem;
+    -webkit-border-radius: .08rem;
+    -moz-border-radius: .08rem;
+    -ms-border-radius: .08rem;
+    -o-border-radius: .08rem;
+    margin-right: .2rem;
+    vertical-align: middle;
+}
+
+.top_box .right {
+    vertical-align: middle;
+    width: calc(100% - 1.6rem);
+    height: 1.4rem;
+    display: inline-block;
+}
+
+.top_box .right .name {
+    padding-top: .1rem;
+    line-height: 1;
+    font-size: .3rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: .7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.top_box .right .price {
+    line-height: 1;
+    font-size: .3rem;
+    color: #FF672A;
+}
+
+section {
+    padding-top: 2.88rem;
+}
+
+.shop_box {
+    background-color: #fff;
+    padding: .2rem .32rem;
+    border-radius: .16rem;
+    -webkit-border-radius: .16rem;
+    -moz-border-radius: .16rem;
+    -ms-border-radius: .16rem;
+    -o-border-radius: .16rem;
+    width: calc(100% - .64rem);
+    margin-top: .3rem;
+    font-size: 0;
+}
+
+.shop_box .type_box {
+    font-size: 0;
+    padding: .2rem 0;
+}
+
+.shop_box .type_box .type {
+    font-size: .28rem;
+    color: #333;
+    font-weight: 400;
+    width: 1.8rem;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: top;
+}
+
+.shop_box .type_box .text {
+    line-height: 1;
+    display: inline-block;
+    width: calc(100% - 1.8rem);
+    vertical-align: top;
+    font-size: .28rem;
+    color: #333;
+    font-weight: bold;
+    word-break:break-all;
+}
+
+.shop_box .btn {
+    margin: .2rem 0;
+    height: .8rem;
+    line-height: .8rem;
+    width: 100%;
+    text-align: center;
+    border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+    background-color: #FF672A;
+    font-size: .32rem;
+    color: #fff;
+}

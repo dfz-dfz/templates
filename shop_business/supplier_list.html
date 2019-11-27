@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>专柜商家列表</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/supplier_list.css">
+    <style>
+        .product .content .title{margin-bottom: .8rem;}
+        .product .content{width: calc(100% - 3.3rem);}
+        .product .btn {width:1.5rem;}
+    </style>
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="javascript:history.back(-1)">
+            <div class="back"></div>
+        </a>
+        <p>专柜商家列表</p>
+    </header>
+
+    <div class="top_box">
+        <img src="./images/demo_bg.jpg" alt="">
+        <div class="right">
+            <p class="name">王老吉</p>
+            <P class="price">¥2.00</P>
+        </div>
+    </div>
+
+    <section>
+       <div class="shop_box">
+           <div class="type_box">
+               <span class="type">商家编号：</span>
+               <p class="text">341946154641461514</p>
+           </div>
+           <div class="type_box">
+               <span class="type">商家手机号：</span>
+               <p class="text">13800138000</p>
+           </div>
+           <div class="type_box">
+               <span class="type">商家名称：</span>
+               <p class="text">大表哥</p>
+           </div>
+           <div class="type_box">
+               <span class="type">发货数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="type_box">
+               <span class="type">剩余数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="type_box">
+               <span class="type">已售数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="btn">去发货</div>
+       </div>
+       <div class="shop_box">
+           <div class="type_box">
+               <span class="type">商家编号：</span>
+               <p class="text">341946154641461514</p>
+           </div>
+           <div class="type_box">
+               <span class="type">商家手机号：</span>
+               <p class="text">13800138000</p>
+           </div>
+           <div class="type_box">
+               <span class="type">商家名称：</span>
+               <p class="text">大表哥</p>
+           </div>
+           <div class="type_box">
+               <span class="type">发货数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="type_box">
+               <span class="type">剩余数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="type_box">
+               <span class="type">已售数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="btn">去发货</div>
+       </div>
+       <div class="shop_box">
+           <div class="type_box">
+               <span class="type">商家编号：</span>
+               <p class="text">341946154641461514</p>
+           </div>
+           <div class="type_box">
+               <span class="type">商家手机号：</span>
+               <p class="text">13800138000</p>
+           </div>
+           <div class="type_box">
+               <span class="type">商家名称：</span>
+               <p class="text">大表哥</p>
+           </div>
+           <div class="type_box">
+               <span class="type">发货数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="type_box">
+               <span class="type">剩余数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="type_box">
+               <span class="type">已售数量：</span>
+               <p class="text">200</p>
+           </div>
+           <div class="btn">去发货</div>
+       </div>
+    </section>
+
+    <!-- 确认发货弹窗 -->
+    <div class="popup_box confirm_popup confirm_send_out_popup hide">
+        <div class="masked"></div>
+        <div class="confirm_send_out confirm_box">
+            <div class="content">是否确认发货？</div>
+            <div class="btn_box">
+                <span class="cancle">取消</span>
+                <span class="confirm">确认</span>
+            </div>
+        </div>
+    </div>
+    <!-- 确认发货弹窗 end -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/public.js"></script>
+    <script>
+        //打开去发货确认弹窗
+        $('.shop_box .btn').click(function(e){
+            e.preventDefault();
+            $('.confirm_send_out_popup').show();
+            stopScroll();
+        })
+
+        //关闭弹窗
+        $('.confirm_send_out_popup').on('click','.masked,.cancle,.confirm',function(){
+            //确认按钮操作
+            if($(this).is('.confirm')){
+                console.log(1);
+            }
+            $('.confirm_send_out_popup').hide();
+            starScroll();
+        })
+    </script>
+</body>
+
+</html>

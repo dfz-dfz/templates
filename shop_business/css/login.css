@@ -1,0 +1,101 @@
+html {
+    background-color: #fff;
+}
+
+.title {
+    font-size: .44rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 1.1rem;
+    text-align: center;
+    margin-bottom: .4rem;
+}
+
+.content {
+    padding: 0 .64rem;
+    font-size: 0;
+}
+
+.content .input_box {
+    font-size: 0;
+    border-bottom: 1px solid rgba(232,232,232,.3);
+    padding: .6rem 0 .25rem;
+    position: relative;
+}
+
+.input_box .type {
+    font-size: .3rem;
+    color: #333;
+    display: inline-block;
+    width: 1.2rem;
+    line-height: 1;
+    vertical-align: top;
+}
+
+.input_box input {
+    width: calc(100% - 1.4rem);
+    padding-left: .2rem;
+    font-size: .28rem;
+    color: #333;
+    vertical-align: top;
+}
+
+.input_box .merchant_box {
+    width: calc(100% - 1.4rem);
+    padding-left: .2rem;
+    font-size: .28rem;
+    color: #999;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+}
+
+.input_box .merchant_box.enable {
+    color: #333;
+    vertical-align: top;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.input_box input.password {
+    width: calc(100% - 1.9rem);
+}
+
+.input_box .eye {
+    position: absolute;
+    display: inline-block;
+    width: .32rem;
+    height: .24rem;
+    background-image: url(../images/eye.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 0;
+    bottom: .3rem;
+}
+
+.input_box .eye.active {
+    background-image: url(../images/eye_active.png);
+}
+
+.input_box input::placeholder {
+    font-size: .28rem;
+    color: #999;
+}
+
+.content .submit {
+    margin-top: .7rem;
+    height: .8rem;
+    line-height: .8rem;
+    width: 100%;
+    text-align: center;
+    border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+    font-size: .32rem;
+    color: #fff;
+    background-color: #FF672A;
+}

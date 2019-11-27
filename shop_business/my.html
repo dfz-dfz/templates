@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人页面</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/my.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+ 
+    <div class="top_box">
+        <div class="left">
+            <p class="name">意大利烧烤店</p>
+            <p class="level_box">等级<span>LV1</span></p>
+        </div>
+        <img src="./images/demo_bg.jpg" alt="">
+    </div>
+
+    <div class="capital">
+        <a href="">
+            <p>0.00</p>
+            <span>推荐奖</span>
+        </a>
+        <a href="">
+            <p>0.00</p>
+            <span>权益</span>
+        </a>
+        <a href="">
+            <p>0.00</p>
+            <span>余额</span>
+        </a>
+        <a href="">
+            <p>0.00</p>
+            <span>分红</span>
+        </a>
+    </div>
+
+    <div class="order">
+        <div class="title">
+            <p>我的订单</p>
+            <span class="all_order">全部订单</span>
+        </div>
+        <div class="operation">
+            <div class="fourImg">
+                <div class="swiper-container swiper-container-horizontal swiper-container-ios">
+                    <div class="swiper-wrapper">
+                        <a href="" class="swiper-slide one swiper-slide-active">
+                            <span class="icon"></span>
+                            <p>扫码订单</p>
+                        </a>
+                        <a href="" class="swiper-slide two swiper-slide-next">
+                            <span class="icon"></span>
+                            <p>物流订单</p>
+                        </a>
+                        <a href="" class="swiper-slide three">
+                            <span class="icon"></span>
+                            <p>核销订单</p>
+                        </a>
+                        <a href="" class="swiper-slide four swiper-slide-next">
+                            <span class="icon"></span>
+                            <p>餐饮订单</p>
+                        </a>
+                        <a href="" class="swiper-slide five">
+                            <span class="icon"></span>
+                            <p>话费订单</p>
+                        </a>
+                        <a href="" class="swiper-slide six">
+                            <span class="icon"></span>
+                            <p>彩票订单</p>
+                        </a>
+                        <a href="" class="swiper-slide seven">
+                            <span class="icon"></span>
+                            <p>虚拟订单</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="">
+                <span class="go_after_sale"></span>
+                <p>退货/售后</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="capital_box">
+        <div class="title"><p>商家收益</p></div>
+        <div class="capital">
+            <a href="">
+                <p>0.00</p>
+                <span>今日贷款</span>
+            </a>
+            <a href="">
+                <p>0.00</p>
+                <span>折扣款</span>
+            </a>
+            <a href="">
+                <p>0.00</p>
+                <span>总贷款</span>
+            </a>
+            <a href="">
+                <p>0.00</p>
+                <span>成功订单数</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="exit">退出登录</div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/public.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script>
+    $(function(){
+        var liCounts = $('.swiper-wrapper a');
+        if(liCounts.length > 4){
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 3.5,
+                //spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        }
+    })
+    </script>
+</body>
+
+</html>

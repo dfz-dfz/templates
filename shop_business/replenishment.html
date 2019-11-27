@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>补货</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/shop_business.css">
+    <style>
+        header .inventory_ordering {
+            font-size: .28rem;
+            color: #333;
+            position: absolute;
+            right: .32rem;
+            top: 50%;
+            margin-top: -.14rem;
+            display: inline-block;
+            line-height: 1;
+            padding-right: .22rem;
+        }
+
+        header .inventory_ordering::after {
+            content: '';
+            position: absolute;
+            width: .12rem;
+            height: .19rem;
+            right: 0;
+            top: 50%;
+            margin-top: -.095rem;
+            background-image: url(./images/filtrate_bottom.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        header .inventory_ordering.top::after {
+            background-image: url(./images/filtrate_top.png);
+        }
+    </style>
+    <script>
+    	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+    <header class="gray">
+        <a href="javascript:history.back(-1)"><div class="back"></div></a>
+        <p>补货</p>
+        <span class="inventory_ordering">库存排序</span>
+    </header>
+
+    <section>
+        <ul class="merchant">
+            <div class="top_box">
+                <img src="./images/demo_bg.jpg" alt="">
+                <p class="name">柠檬草莓冰沙</p>
+            </div>
+            <li class="type_box">
+                <span class="title">所属售货机：</span>
+                <p class="text">B12</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道层数：</span>
+                <p class="text">2</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道编号：</span>
+                <p class="text">18号</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道容量：</span>
+                <p class="text">120</p>
+            </li>
+            <li class="type_box">
+                <span class="title">剩余数量：</span>
+                <p class="text">12</p>
+            </li>
+            <li class="type_box">
+                <span class="title">库存预警：</span>
+                <p class="text warn">1</p>
+            </li>
+        </ul>
+        <ul class="merchant">
+            <div class="top_box">
+                <img src="./images/demo_bg.jpg" alt="">
+                <p class="name">柠檬草莓冰沙</p>
+            </div>
+            <li class="type_box">
+                <span class="title">所属售货机：</span>
+                <p class="text">B12</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道层数：</span>
+                <p class="text">2</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道编号：</span>
+                <p class="text">18号</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道容量：</span>
+                <p class="text">120</p>
+            </li>
+            <li class="type_box">
+                <span class="title">剩余数量：</span>
+                <p class="text">12</p>
+            </li>
+            <li class="type_box">
+                <span class="title">库存预警：</span>
+                <p class="text warn">1</p>
+            </li>
+        </ul>
+        <ul class="merchant">
+            <div class="top_box">
+                <img src="./images/demo_bg.jpg" alt="">
+                <p class="name">柠檬草莓冰沙</p>
+            </div>
+            <li class="type_box">
+                <span class="title">所属售货机：</span>
+                <p class="text">B12</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道层数：</span>
+                <p class="text">2</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道编号：</span>
+                <p class="text">18号</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道容量：</span>
+                <p class="text">120</p>
+            </li>
+            <li class="type_box">
+                <span class="title">剩余数量：</span>
+                <p class="text">12</p>
+            </li>
+            <li class="type_box">
+                <span class="title">库存预警：</span>
+                <p class="text warn">1</p>
+            </li>
+        </ul>
+        <ul class="merchant">
+            <div class="top_box">
+                <img src="./images/demo_bg.jpg" alt="">
+                <p class="name">柠檬草莓冰沙</p>
+            </div>
+            <li class="type_box">
+                <span class="title">所属售货机：</span>
+                <p class="text">B12</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道层数：</span>
+                <p class="text">2</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道编号：</span>
+                <p class="text">18号</p>
+            </li>
+            <li class="type_box">
+                <span class="title">货道容量：</span>
+                <p class="text">120</p>
+            </li>
+            <li class="type_box">
+                <span class="title">剩余数量：</span>
+                <p class="text">12</p>
+            </li>
+            <li class="type_box">
+                <span class="title">库存预警：</span>
+                <p class="text warn">1</p>
+            </li>
+        </ul>
+    </section>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/public.js"></script>
+    <script>
+        $('header .inventory_ordering').click(function(){
+            $(this).toggleClass('top');
+        })
+    </script>
+</body>
+</html>

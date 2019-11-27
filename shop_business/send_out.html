@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>确认发货</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/send_out.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="javascript:history.back(-1)">
+            <div class="back"></div>
+        </a>
+        <p>确认发货</p>
+    </header>
+
+    <div class="area">
+        <div class="type_box">
+            <span class="type">产品名称</span>
+            <div class="name">请选择产品名称</div>
+        </div>
+        <div class="type_box">
+            <span class="type">产品数量</span>
+            <input type="number" class="num" placeholder="请选择产品数量">
+        </div>
+        <div class="submit">确认发货</div>
+    </div>
+
+    <section>
+        <div class="title">发货列表</div>
+        <div class="list_content">
+            <div class="shop_box">
+                <div class="type_box">
+                    <span class="type">产品名称：</span>
+                    <p class="text">王老吉</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">产品数量：</span>
+                    <p class="text">200</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">发货时间：</span>
+                    <p class="text">2019-05-12  12:25:26</p>
+                </div>
+            </div>
+            <div class="shop_box">
+                <div class="type_box">
+                    <span class="type">产品名称：</span>
+                    <p class="text">王老吉</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">产品数量：</span>
+                    <p class="text">200</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">发货时间：</span>
+                    <p class="text">2019-05-12  12:25:26</p>
+                </div>
+            </div>
+            <div class="shop_box">
+                <div class="type_box">
+                    <span class="type">产品名称：</span>
+                    <p class="text">王老吉</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">产品数量：</span>
+                    <p class="text">200</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">发货时间：</span>
+                    <p class="text">2019-05-12  12:25:26</p>
+                </div>
+            </div>
+            <div class="shop_box">
+                <div class="type_box">
+                    <span class="type">产品名称：</span>
+                    <p class="text">王老吉</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">产品数量：</span>
+                    <p class="text">200</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">发货时间：</span>
+                    <p class="text">2019-05-12  12:25:26</p>
+                </div>
+            </div>
+            <div class="shop_box">
+                <div class="type_box">
+                    <span class="type">产品名称：</span>
+                    <p class="text">王老吉</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">产品数量：</span>
+                    <p class="text">200</p>
+                </div>
+                <div class="type_box">
+                    <span class="type">发货时间：</span>
+                    <p class="text">2019-05-12  12:25:26</p>
+                </div>
+            </div>
+
+            <!-- 暂无发货状态 -->
+            <div class="no_shop">
+                <img src="./images/no_shop.png" alt="">
+                <p class="tips">暂无发货列表</p>
+            </div>
+            <!-- 暂无发货状态 end -->
+        </div>
+
+        <!-- 选择产品弹窗 -->
+        <div class="popup_box choice_shop_popup hide">
+            <div class="masked"></div>
+            <div class="choice_shop">
+                <div class="top">
+                    <p>选择产品</p>
+                    <span class="close"></span>
+                </div>
+                <form class="search_box" id="search">
+                    <input type="text" class="search">
+                    <span class="placeholder">搜索产品名称</span>
+                </form>
+                <div class="shop_label">
+                    <span class="shop active">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                    <span class="shop">王老吉</span>
+                </div>
+                <div class="submit">确定</div>
+            </div>
+        </div>
+        <!-- 选择产品弹窗 end -->
+    </section>
+    
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/public.js"></script>
+    <script>
+        //监听按钮是否可以点击
+        $('input.name').on('input propertychange',function(){
+            $('.submit').removeClass('active');
+            if($(this).val() != '' && $('input.num').val() != ''){
+                $('.submit').addClass('active');
+            }
+        })
+
+        $('input.num').on('input propertychange',function(){
+            $('.submit').removeClass('active');
+            if($(this).val() != '' && $('.name').hasClass('enable')){
+                $('.submit').addClass('active');
+            }
+        })
+
+        $('.name').click(function(){
+            $('.choice_shop_popup').show();
+            stopScroll();
+        })
+
+        //关闭弹窗
+        $('.choice_shop_popup').on('click','.masked,.close,.submit',function(){
+            if($(this).is('.submit')){
+                console.log($('.shop_label .active').text());
+                $('.name').html($('.shop_label .active').text()).addClass('enable');
+            }
+            $('.choice_shop_popup').hide();
+            starScroll();
+        })
+
+        // 搜索框提示文字控制
+        $('input.search').focus(function(){
+            $('.placeholder').hide();
+        })
+
+        $('.placeholder').on('click',function(){
+            $(this).hide();
+            $('input.search').focus();
+        })
+
+        $('input.search').blur(function(){
+            if($(this).val() == ''){
+                $('.placeholder').show();
+            }
+        })
+
+        // 产品选择
+        $('.shop_label').on('click','span',function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    </script>
+</body>
+
+</html>

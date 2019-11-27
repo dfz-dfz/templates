@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单列表</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/order_list.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="javascript:history.back(-1)">
+            <div class="back"></div>
+        </a>
+        <p>订单列表</p>
+    </header>
+
+    <nav>
+        <span class="active">全部</span>
+        <span>成功</span>
+        <span>失败</span>
+        <span>取消</span>
+    </nav>
+
+    <section>
+       <!-- 交易成功 -->
+       <div class="order_box">
+           <div class="top">
+               <p class="order_id">订单编号：4918498418141498</p>
+               <span class="state">交易成功</span>
+           </div>
+           <div class="content">
+               <div class="shop_box">
+                   <img src="./images/demo_bg.jpg" alt="">
+                   <div class="right">
+                       <p class="name">西柚冰沙<span class="num">x100</span></p>
+                       <p class="price">¥250.00</p>
+                   </div>
+               </div>
+           </div>
+           <div class="bottom">下单时间：2019-12-12  12:25:25</div>
+       </div>
+       <!-- 交易成功 end -->
+
+        <!-- 交易失败 -->
+        <div class="order_box">
+            <div class="top">
+                <p class="order_id">订单编号：4918498418141498</p>
+                <span class="state">交易失败</span>
+            </div>
+            <div class="content">
+                <div class="shop_box">
+                    <img src="./images/demo_bg.jpg" alt="">
+                    <div class="right">
+                        <p class="name">西柚冰沙<span class="num">x100</span></p>
+                        <p class="price">¥250.00</p>
+                    </div>
+                </div>
+                <div class="shop_box">
+                    <img src="./images/demo_bg.jpg" alt="">
+                    <div class="right">
+                        <p class="name">西柚冰沙<span class="num">x100</span></p>
+                        <p class="price">¥250.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">下单时间：2019-12-12  12:25:25</div>
+        </div>
+        <!-- 交易失败 end -->
+
+        <!-- 交易取消 -->
+        <div class="order_box">
+            <div class="top">
+                <p class="order_id">订单编号：4918498418141498</p>
+                <span class="state">交易取消</span>
+            </div>
+            <div class="content">
+                <div class="shop_box">
+                    <img src="./images/demo_bg.jpg" alt="">
+                    <div class="right">
+                        <p class="name">西柚冰沙<span class="num">x100</span></p>
+                        <p class="price">¥250.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">下单时间：2019-12-12  12:25:25</div>
+        </div>
+        <!-- 交易取消 end -->
+
+        <!-- 发货中 -->
+        <div class="order_box">
+            <div class="top">
+                <p class="order_id">订单编号：4918498418141498</p>
+                <span class="state">发货中</span>
+            </div>
+            <div class="content">
+                <div class="shop_box">
+                    <img src="./images/demo_bg.jpg" alt="">
+                    <div class="right">
+                        <p class="name">西柚冰沙<span class="num">x100</span></p>
+                        <p class="price">¥250.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">下单时间：2019-12-12  12:25:25</div>
+        </div>
+        <!-- 发货中 end -->
+
+        <!-- end -->
+        <div class="end_box">已经到底啦~</div>
+    </section>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/public.js"></script>
+    <script>
+       $('nav').on('click','span',function(){
+           $(this).addClass('active').siblings().removeClass('active');
+       })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+    <div class="title">登录</div>
+
+    <div class="content">
+        <div class="input_box">
+            <span class="type">商家</span>
+            <div class="merchant_box">请选择商家店铺</div>
+        </div>
+        <div class="input_box">
+            <span class="type">手机号</span>
+            <input type="number" class="phone" placeholder="请输入手机号码">
+        </div>
+        <div class="input_box">
+            <span class="type">密码</span>
+            <input type="password" class="password" placeholder="请输入密码">
+            <span class="eye"></span>
+        </div>
+
+        <div class="submit">登录</div>
+    </div>
+
+    <!-- 选择产品弹窗 -->
+    <div class="popup_box choice_shop_popup hide">
+            <div class="masked"></div>
+            <div class="choice_shop">
+                <div class="top">
+                    <p style="text-align: left;">选择商家</p>
+                    <span class="close"></span>
+                </div>
+                <form class="search_box" id="search">
+                    <input type="text" class="search">
+                    <span class="placeholder">搜索商家名称</span>
+                </form>
+                <div class="shop_label">
+                    <span class="merchant active">大表姐意大利烧烤十三岁困了就睡</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                    <span class="merchant">王老吉</span>
+                </div>
+                <div class="submit">确定</div>
+            </div>
+        </div>
+        <!-- 选择产品弹窗 end -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/public.js"></script>
+    <script>
+        //商家选择
+        $('.merchant_box').click(function(){
+            $('.choice_shop_popup').show();
+            stopScroll();
+        })
+
+        $('.choice_shop_popup').on('click','.masked,.close,.submit',function(){
+            if($(this).is('.submit')){
+                $('.merchant_box').html($('.shop_label .active').text()).addClass('enable');
+            }
+            $('.choice_shop_popup').hide();
+            starScroll();
+        })
+
+        // 搜索框提示文字控制
+        $('input.search').focus(function(){
+            $('.placeholder').hide();
+        })
+
+        $('.placeholder').on('click',function(){
+            $(this).hide();
+            $('input.search').focus();
+        })
+
+        $('input.search').blur(function(){
+            if($(this).val() == ''){
+                $('.placeholder').show();
+            }
+        })
+
+        // 搜索框搜索请求
+        $('input.search').on('input propertychange',function(){
+            if($(this).val() != ''){
+                console.log(1);
+            }
+        })
+
+        // 商家选择
+        $('.shop_label').on('click','span',function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+
+        //密码框控制
+        $('.eye').click(function(){
+            $(this).toggleClass('active');
+            $('.password').attr('type','password');
+            if($(this).hasClass('active')){
+                $('.password').attr('type','text');
+            }
+        })
+    </script>
+</body>
+
+</html>

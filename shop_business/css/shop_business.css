@@ -1,0 +1,69 @@
+.merchant {
+    border-radius: .16rem;
+    -webkit-border-radius: .16rem;
+    -moz-border-radius: .16rem;
+    -ms-border-radius: .16rem;
+    -o-border-radius: .16rem;
+    background-color: #fff;
+    padding: .2rem .3rem;
+    margin-bottom: .3rem;
+}
+
+.merchant .top_box {
+    font-size: 0;
+    padding-bottom: .3rem;
+    border-bottom: 1px solid rgba(232,232,232,.3);
+}
+
+.merchant .top_box img {
+    width: .8rem;
+    height: .8rem;
+    border-radius: .1rem;
+    -webkit-border-radius: .1rem;
+    -moz-border-radius: .1rem;
+    -ms-border-radius: .1rem;
+    -o-border-radius: .1rem;
+    margin-right: .2rem;
+    vertical-align: middle;
+}
+
+.merchant .top_box .name {
+    vertical-align: middle;
+    font-size: .28rem;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: calc(100% - 1rem);
+    overflow: hidden;
+}
+
+.merchant .type_box {
+    padding: .2rem 0;
+    font-size: 0;
+    line-height: 1;
+}
+
+.merchant .type_box .title {
+    font-size: .28rem;
+    color: #333;
+    font-weight: 400;
+    width: 2rem;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.merchant .type_box .text {
+    font-size: .28rem;
+    color: 333;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    width: -webkit-calc(100% - 2rem);
+    width: -moz-calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    word-break: break-all;
+}
+
+.merchant .type_box .text.warn {
+    color: #FF672A;
+}
