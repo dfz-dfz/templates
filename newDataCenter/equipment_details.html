@@ -5,13 +5,21 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html;" charset="UTF-8">
 	<title>设备详情</title>
-	<link rel="stylesheet" media="" href="./css/public.css">
+	<!--[if lt IE 9]>
+　　　　<script src="./js/css3-mediaqueries.js"></script>
+　　<![endif]-->
 	<script>
-    	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
-    </script>
+		if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		document.write('<link href="./css/public.css" type="text/css" rel=stylesheet>');
+	} else {
+		document.write('<link href="./css/equipment_details_pc.css" type="text/css" rel=stylesheet>');
+	}
+	</script>
 </head>
 <body>
 	<header>
+		<a href="javascript:history.back(-1)"><span class="back">返回上一页</span></a>
 		<p>设备详情</p>
 	</header>
 
@@ -30,21 +38,41 @@
 
 			<div class="equipment_list type_box">
 				<div class="list_title">货道列表</div>
-				<div class="type">
-					<span class="title">货道编号：</span>
-					<p class="text">02货道</p>
+				<div class="list">
+					<div class="type">
+						<span class="title">货道编号：</span>
+						<p class="text">02货道</p>
+					</div>
+					<div class="type">
+						<span class="title">产品名称：</span>
+						<p class="text">健力宝饮料</p>
+					</div>
+					<div class="type">
+						<span class="title">产品库存：</span>
+						<p class="text">1200</p>
+					</div>
+					<div class="type">
+						<span class="title">产品销量：</span>
+						<p class="text">23</p>
+					</div>
 				</div>
-				<div class="type">
-					<span class="title">产品名称：</span>
-					<p class="text">健力宝饮料</p>
-				</div>
-				<div class="type">
-					<span class="title">产品库存：</span>
-					<p class="text">1200</p>
-				</div>
-				<div class="type">
-					<span class="title">产品销量：</span>
-					<p class="text">23</p>
+				<div class="list">
+					<div class="type">
+						<span class="title">货道编号：</span>
+						<p class="text">02货道</p>
+					</div>
+					<div class="type">
+						<span class="title">产品名称：</span>
+						<p class="text">健力宝饮料</p>
+					</div>
+					<div class="type">
+						<span class="title">产品库存：</span>
+						<p class="text">1200</p>
+					</div>
+					<div class="type">
+						<span class="title">产品销量：</span>
+						<p class="text">23</p>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -5,13 +5,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html;" charset="UTF-8">
 	<title>设备列表</title>
-	<link rel="stylesheet" media="" href="./css/public.css">
+	<link rel="stylesheet" href="./css/public.css">
+	<!--[if lt IE 9]>
+　　　　<script src="./js/css3-mediaqueries.js"></script>
+　　<![endif]-->
 	<script>
-    	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
-    </script>
+		if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		document.write('<link href="./css/public.css" type="text/css" rel=stylesheet>');
+	} else {
+		document.write('<link href="./css/equipment_list_pc.css" type="text/css" rel=stylesheet>');
+	}
+	</script>
 </head>
 <body>
 	<header>
+		<a href="javascript:history.back(-1)"><span class="back">返回上一页</span></a>
 		<p>设备列表</p>
 	</header>
 
@@ -19,100 +28,100 @@
 		<a href="./equipment_details.html">
 			<div class="equipment_box type_box">
 				<div class="type">
-					<span class="title">商家名称：</span>
-					<p class="text">大表哥</p>
+					<span class="title" title="商家名称：">商家名称：</span>
+					<p class="text" title="大表哥">大表哥</p>
 				</div>
 				<div class="type">
-					<span class="title">设备名称：</span>
-					<p class="text">自动售货机1号</p>
+					<span class="title" title="设备名称：">设备名称：</span>
+					<p class="text" title="自动售货机1号">自动售货机1号</p>
 				</div>
 				<div class="type">
-					<span class="title">设备编号：</span>
-					<p class="text">B01</p>
+					<span class="title" title="设备编号：">设备编号：</span>
+					<p class="text" title="B01">B01</p>
 				</div>
 				<div class="type">
-					<span class="title">设备地址：</span>
-					<p class="text">广州市白云区京溪南方医院沙太路68号现象工场</p>
-				</div>
-			</div>
-		</a>
-		<a href="./equipment_details.html">
-			<div class="equipment_box type_box">
-				<div class="type">
-					<span class="title">商家名称：</span>
-					<p class="text">大表哥</p>
-				</div>
-				<div class="type">
-					<span class="title">设备名称：</span>
-					<p class="text">自动售货机1号</p>
-				</div>
-				<div class="type">
-					<span class="title">设备编号：</span>
-					<p class="text">B01</p>
-				</div>
-				<div class="type">
-					<span class="title">设备地址：</span>
-					<p class="text">广州市白云区京溪南方医院沙太路68号现象工场</p>
+					<span class="title" title="设备地址：">设备地址：</span>
+					<p class="text" title="广州市白云区京溪南方医院沙太路68号现象工场">广州市白云区京溪南方医院沙太路68号现象工场</p>
 				</div>
 			</div>
 		</a>
 		<a href="./equipment_details.html">
 			<div class="equipment_box type_box">
 				<div class="type">
-					<span class="title">商家名称：</span>
-					<p class="text">大表哥</p>
+					<span class="title" title="商家名称：">商家名称：</span>
+					<p class="text" title="大表哥">大表哥</p>
 				</div>
 				<div class="type">
-					<span class="title">设备名称：</span>
-					<p class="text">自动售货机1号</p>
+					<span class="title" title="设备名称：">设备名称：</span>
+					<p class="text" title="自动售货机1号">自动售货机1号</p>
 				</div>
 				<div class="type">
-					<span class="title">设备编号：</span>
-					<p class="text">B01</p>
+					<span class="title" title="设备编号：">设备编号：</span>
+					<p class="text" title="B01">B01</p>
 				</div>
 				<div class="type">
-					<span class="title">设备地址：</span>
-					<p class="text">广州市白云区京溪南方医院沙太路68号现象工场</p>
-				</div>
-			</div>
-		</a>
-		<a href="./equipment_details.html">
-			<div class="equipment_box type_box">
-				<div class="type">
-					<span class="title">商家名称：</span>
-					<p class="text">大表哥</p>
-				</div>
-				<div class="type">
-					<span class="title">设备名称：</span>
-					<p class="text">自动售货机1号</p>
-				</div>
-				<div class="type">
-					<span class="title">设备编号：</span>
-					<p class="text">B01</p>
-				</div>
-				<div class="type">
-					<span class="title">设备地址：</span>
-					<p class="text">广州市白云区京溪南方医院沙太路68号现象工场</p>
+					<span class="title" title="设备地址：">设备地址：</span>
+					<p class="text" title="广州市白云区京溪南方医院沙太路68号现象工场">广州市白云区京溪南方医院沙太路68号现象工场</p>
 				</div>
 			</div>
 		</a>
 		<a href="./equipment_details.html">
 			<div class="equipment_box type_box">
 				<div class="type">
-					<span class="title">商家名称：</span>
-					<p class="text">大表哥</p>
+					<span class="title" title="商家名称：">商家名称：</span>
+					<p class="text" title="大表哥">大表哥</p>
 				</div>
 				<div class="type">
-					<span class="title">设备名称：</span>
-					<p class="text">自动售货机1号</p>
+					<span class="title" title="设备名称：">设备名称：</span>
+					<p class="text" title="自动售货机1号">自动售货机1号</p>
 				</div>
 				<div class="type">
-					<span class="title">设备编号：</span>
-					<p class="text">B01</p>
+					<span class="title" title="设备编号：">设备编号：</span>
+					<p class="text" title="B01">B01</p>
 				</div>
 				<div class="type">
-					<span class="title">设备地址：</span>
-					<p class="text">广州市白云区京溪南方医院沙太路68号现象工场</p>
+					<span class="title" title="设备地址：">设备地址：</span>
+					<p class="text" title="广州市白云区京溪南方医院沙太路68号现象工场">广州市白云区京溪南方医院沙太路68号现象工场</p>
+				</div>
+			</div>
+		</a>
+		<a href="./equipment_details.html">
+			<div class="equipment_box type_box">
+				<div class="type">
+					<span class="title" title="商家名称：">商家名称：</span>
+					<p class="text" title="大表哥">大表哥</p>
+				</div>
+				<div class="type">
+					<span class="title" title="设备名称：">设备名称：</span>
+					<p class="text" title="自动售货机1号">自动售货机1号</p>
+				</div>
+				<div class="type">
+					<span class="title" title="设备编号：">设备编号：</span>
+					<p class="text" title="B01">B01</p>
+				</div>
+				<div class="type">
+					<span class="title" title="设备地址：">设备地址：</span>
+					<p class="text" title="广州市白云区京溪南方医院沙太路68号现象工场">广州市白云区京溪南方医院沙太路68号现象工场</p>
+				</div>
+			</div>
+		</a>
+		<a href="./equipment_details.html">
+			<div class="equipment_box type_box">
+				<div class="type">
+					<span class="title" title="商家名称：">商家名称：</span>
+					<p class="text" title="大表哥">大表哥</p>
+				</div>
+				<div class="type">
+					<span class="title" title="设备名称：">设备名称：</span>
+					<p class="text" title="自动售货机1号">自动售货机1号</p>
+				</div>
+				<div class="type">
+					<span class="title" title="设备编号：">设备编号：</span>
+					<p class="text" title="B01">B01</p>
+				</div>
+				<div class="type">
+					<span class="title" title="设备地址：">设备地址：</span>
+					<p class="text" title="广州市白云区京溪南方医院沙太路68号现象工场">广州市白云区京溪南方医院沙太路68号现象工场</p>
 				</div>
 			</div>
 		</a>

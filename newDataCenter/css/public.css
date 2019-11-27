@@ -58,6 +58,10 @@ section {
 		text-align: center;
 	}
 
+	header .back {
+		display: none;
+	}
+
 	section {
 		padding: .88rem .32rem 0;
 	}
@@ -65,10 +69,11 @@ section {
 	section .equipment_box {
 		padding: .2rem .3rem .2rem .46rem;
 		background-color: #fff;
-		-moz-border-radius: .16rem;
 		border-radius: .16rem;
 		position: relative;
 		margin-top: .3rem;
+		width: -webkit-calc(100% - .64rem);
+		width: -moz-calc(100% - .64rem);
 		width: calc(100% - .64rem);
 		-webkit-border-radius: .16rem;
 		-ms-border-radius: .16rem;
@@ -117,6 +122,8 @@ section {
 		display: inline-block;
 		vertical-align: top;
 		font-weight: bold;
+		width: -webkit-calc(100% - 1.6rem);
+		width: -moz-calc(100% - 1.6rem);
 		width: calc(100% - 1.6rem);
 	}
 
@@ -166,5 +173,15 @@ section {
 		margin-top: -.09rem;
 		left: 0;
 		background-color: #00A1FF;
+	}
+
+	.equipment_list .list {
+		padding: .2rem 0;
+		border-bottom: 1px solid rgba(232,232,232,1);
+	}
+
+	.equipment_list .list:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
 	}
 }
