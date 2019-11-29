@@ -177,7 +177,6 @@
     font-size: .28rem;
     color: #333;
     padding: .2rem .1rem .2rem .32rem;
-    padding-bottom: 0;
 }
 
 .order .title > p {
@@ -411,4 +410,9 @@
     -o-border-radius: .1rem;
     font-size: .32rem;
     color: #333;
+}
+
+.home_title,
+.capital .title {
+    display: none;
 }

@@ -7,16 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>订单列表</title>
     <link rel="stylesheet" href="./css/public.css">
-    <link rel="stylesheet" href="./css/order_list.css">
     <script>
-        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+            document.write('<link rel="stylesheet" href="./css/order_list.css">');
+        } else {
+            document.write('<link rel="stylesheet" href="./css/order_list_pc.css">">');
+        }
     </script>
 </head>
 
 <body>
     <header>
         <a href="javascript:history.back(-1)">
-            <div class="back"></div>
+            <div class="back"><span>返回个人中心</span></div>
         </a>
         <p>订单列表</p>
     </header>
@@ -32,83 +36,83 @@
        <!-- 交易成功 -->
        <div class="order_box">
            <div class="top">
-               <p class="order_id">订单编号：4918498418141498</p>
+               <p class="order_id"><span>订单编号：</span>4918498418141498</p>
                <span class="state">交易成功</span>
            </div>
            <div class="content">
                <div class="shop_box">
                    <img src="./images/demo_bg.jpg" alt="">
                    <div class="right">
-                       <p class="name">西柚冰沙<span class="num">x100</span></p>
-                       <p class="price">¥250.00</p>
+                       <p class="name"><span class="text">西柚冰沙西柚冰沙西柚冰沙西柚冰沙西柚冰沙西柚冰沙西柚冰沙西柚冰沙</span><span class="num">x100</span></p>
+                       <p class="price"><span>总额：</span>¥250.00</p>
                    </div>
                </div>
            </div>
-           <div class="bottom">下单时间：2019-12-12  12:25:25</div>
+           <div class="bottom"><span>下单时间：</span>2019-12-12  12:25:25</div>
        </div>
        <!-- 交易成功 end -->
 
         <!-- 交易失败 -->
         <div class="order_box">
             <div class="top">
-                <p class="order_id">订单编号：4918498418141498</p>
+                <p class="order_id"><span>订单编号：</span>4918498418141498</p>
                 <span class="state">交易失败</span>
             </div>
             <div class="content">
                 <div class="shop_box">
                     <img src="./images/demo_bg.jpg" alt="">
                     <div class="right">
-                        <p class="name">西柚冰沙<span class="num">x100</span></p>
-                        <p class="price">¥250.00</p>
+                        <p class="name"><span class="text">西柚冰沙</span><span class="num">x100</span></p>
+                        <p class="price"><span>总额：</span>¥250.00</p>
                     </div>
                 </div>
                 <div class="shop_box">
                     <img src="./images/demo_bg.jpg" alt="">
                     <div class="right">
-                        <p class="name">西柚冰沙<span class="num">x100</span></p>
-                        <p class="price">¥250.00</p>
+                        <p class="name"><span class="text">西柚冰沙</span><span class="num">x100</span></p>
+                        <p class="price"><span>总额：</span>¥250.00</p>
                     </div>
                 </div>
             </div>
-            <div class="bottom">下单时间：2019-12-12  12:25:25</div>
+            <div class="bottom"><span>下单时间：</span>2019-12-12  12:25:25</div>
         </div>
         <!-- 交易失败 end -->
 
         <!-- 交易取消 -->
         <div class="order_box">
             <div class="top">
-                <p class="order_id">订单编号：4918498418141498</p>
-                <span class="state">交易取消</span>
+                <p class="order_id"><span>订单编号：</span>4918498418141498</p>
+                <span class="state state2">交易取消</span>
             </div>
             <div class="content">
                 <div class="shop_box">
                     <img src="./images/demo_bg.jpg" alt="">
                     <div class="right">
-                        <p class="name">西柚冰沙<span class="num">x100</span></p>
-                        <p class="price">¥250.00</p>
+                        <p class="name"><span class="text">西柚冰沙</span><span class="num">x100</span>
+                        <p class="price"><span>总额：</span>¥250.00</p>
                     </div>
                 </div>
             </div>
-            <div class="bottom">下单时间：2019-12-12  12:25:25</div>
+            <div class="bottom"><span>下单时间：</span>2019-12-12  12:25:25</div>
         </div>
         <!-- 交易取消 end -->
 
         <!-- 发货中 -->
         <div class="order_box">
             <div class="top">
-                <p class="order_id">订单编号：4918498418141498</p>
-                <span class="state">发货中</span>
+                <p class="order_id"><span>订单编号：</span>4918498418141498</p>
+                <span class="state state1">发货中</span>
             </div>
             <div class="content">
                 <div class="shop_box">
                     <img src="./images/demo_bg.jpg" alt="">
                     <div class="right">
-                        <p class="name">西柚冰沙<span class="num">x100</span></p>
-                        <p class="price">¥250.00</p>
+                        <p class="name"><span class="text">西柚冰沙</span><span class="num">x100</span></p>
+                        <p class="price"><span>总额：</span>¥250.00</p>
                     </div>
                 </div>
             </div>
-            <div class="bottom">下单时间：2019-12-12  12:25:25</div>
+            <div class="bottom"><span>下单时间：</span>2019-12-12  12:25:25</div>
         </div>
         <!-- 发货中 end -->
 

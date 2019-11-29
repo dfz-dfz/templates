@@ -7,87 +7,108 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登录</title>
     <link rel="stylesheet" href="./css/public.css">
-    <link rel="stylesheet" href="./css/login.css">
     <script>
-        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+            document.write('<link rel="stylesheet" href="./css/login.css">');
+        } else {
+            document.write('<link href="./css/login_pc.css" rel=stylesheet>');
+        }
     </script>
 </head>
 
 <body>
-    <div class="title">登录</div>
-
-    <div class="content">
-        <div class="input_box">
-            <span class="type">商家</span>
-            <div class="merchant_box">请选择商家店铺</div>
-        </div>
-        <div class="input_box">
-            <span class="type">手机号</span>
-            <input type="number" class="phone" placeholder="请输入手机号码">
-        </div>
-        <div class="input_box">
-            <span class="type">密码</span>
-            <input type="password" class="password" placeholder="请输入密码">
-            <span class="eye"></span>
-        </div>
-
-        <div class="submit">登录</div>
-    </div>
-
-    <!-- 选择产品弹窗 -->
-    <div class="popup_box choice_shop_popup hide">
-            <div class="masked"></div>
-            <div class="choice_shop">
-                <div class="top">
-                    <p style="text-align: left;">选择商家</p>
-                    <span class="close"></span>
-                </div>
-                <form class="search_box" id="search">
-                    <input type="text" class="search">
-                    <span class="placeholder">搜索商家名称</span>
-                </form>
-                <div class="shop_label">
-                    <span class="merchant active">大表姐意大利烧烤十三岁困了就睡</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                    <span class="merchant">王老吉</span>
-                </div>
-                <div class="submit">确定</div>
+    <div class="main">
+        <div class="title">商家登录</div>
+    
+        <div class="content">
+            <div class="input_box">
+                <span class="type">商家</span>
+                <div class="merchant_box">请选择商家店铺</div>
             </div>
+            <div class="input_box">
+                <span class="type">手机号</span>
+                <input type="number" class="phone" placeholder="请输入手机号码">
+            </div>
+            <div class="input_box">
+                <span class="type">密码</span>
+                <input type="password" class="password" placeholder="请输入密码">
+                <span class="eye"></span>
+            </div>
+    
+            <div class="submit">登录</div>
         </div>
-        <!-- 选择产品弹窗 end -->
+
+        <!-- 选择产品弹窗 -->
+        <div class="popup_box choice_shop_popup hide">
+                <div class="masked"></div>
+                <div class="choice_shop">
+                    <div class="top">
+                        <p style="text-align: left;">选择商家</p>
+                        <span class="close"></span>
+                    </div>
+                    <form class="search_box" id="search">
+                        <input type="text" class="search">
+                        <span class="placeholder">搜索商家名称</span>
+                    </form>
+                    <div class="shop_label">
+                        <span class="merchant active">大表姐意大利烧烤十三岁困了就睡</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                        <span class="merchant">王老吉</span>
+                    </div>
+                    <div class="submit">确定</div>
+                </div>
+            </div>
+            <!-- 选择产品弹窗 end -->
+    </div>
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/public.js"></script>
     <script>
         //商家选择
-        $('.merchant_box').click(function(){
-            $('.choice_shop_popup').show();
-            stopScroll();
+        $('.merchant_box').click(function(e){
+            e.stopPropagation();
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')) {
+                $('.choice_shop_popup').show();
+                stopScroll();
+            }else {
+                $('.choice_shop_popup').hide();
+                starScroll();
+                if(!/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+                $("body").css({"position":"relative","height":"100%",'top':'auto'});
+            }
+            }
         })
 
-        $('.choice_shop_popup').on('click','.masked,.close,.submit',function(){
+        $('.choice_shop_popup').on('click','.masked,.close,.submit',function(e){
+            e.preventDefault();
+            $('.merchant_box').removeClass('active');
             if($(this).is('.submit')){
                 $('.merchant_box').html($('.shop_label .active').text()).addClass('enable');
             }
             $('.choice_shop_popup').hide();
             starScroll();
+            if(!/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+                $("body").css({"position":"relative","height":"100%",'top':'auto'});
+            }
         })
 
         // 搜索框提示文字控制
@@ -116,6 +137,13 @@
         // 商家选择
         $('.shop_label').on('click','span',function(){
             $(this).addClass('active').siblings().removeClass('active');
+            if(!/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+                $('.merchant_box').html($('.shop_label .active').text()).addClass('enable');    
+                $('.merchant_box').removeClass('active');
+                $('.choice_shop_popup').hide();
+                starScroll();
+                $("body").css({"position":"relative","height":"100%",'top':'auto'});
+            }
         })
 
         //密码框控制
@@ -125,6 +153,25 @@
             if($(this).hasClass('active')){
                 $('.password').attr('type','text');
             }
+        })
+
+        $(document).on('click',function(e){
+            e.preventDefault();
+            var _area = $('.choice_shop_popup');
+            if(!_area.is(e.target) && _area.has(e.target).length === 0){
+                $('.merchant_box').removeClass('active');
+                $('.choice_shop_popup').hide();
+                starScroll();
+                $("body").css({"position":"relative","height":"100%",'top':'auto'});
+            }
+        })
+
+        $('input').on('focus',function() {
+            $(this).addClass('active');
+        })
+
+        $('input').on('blur',function() {
+            $(this).removeClass('active');
         })
     </script>
 </body>

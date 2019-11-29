@@ -149,3 +149,8 @@ section {
     font-size: .24rem;
     color: #999;
 }
+
+header .back span,
+.right .price span {
+    display: none;
+}

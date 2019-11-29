@@ -1,0 +1,237 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+html {
+    background-color: #f5f5f5;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    min-width: 500px;
+}
+
+.main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -260px;
+    width: 500px;
+    height: 360px;
+    background-color: #fff;
+    box-shadow:0px 10px 24px 0px rgba(4,0,0,0.05);
+    padding-top: 160px;
+    text-align: center;
+}
+
+.main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #3c221e;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -64.5px;
+    top: 30px;
+    width: 129px;
+    height: 98px;
+    background-image: url(../images/pc/shop_icon.png);
+    -o-background-size: 100% 100%;
+       background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.content .input_box {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 330px;
+    font-size: 0;
+}
+
+.content .merchant_box,
+.input_box input {
+    position: relative;
+    width: 310px;
+    height: 46px;
+    line-height: 46px;
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 20px;
+    margin: 0 auto;
+    border:1px solid rgba(232,232,232,1);
+}
+
+.input_box input.active {
+    border:1px solid rgba(255,103,42,1);
+}
+
+.content .merchant_box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 20px;
+    width: 12px;
+    height: 8px;
+    background-image: url(../images/pc/filtrate_disable.png);
+    -o-background-size: 100% 100%;
+       background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.content .merchant_box.active::after {
+    background-image: url(../images/pc/filtrate_select.png);
+}
+
+.content .type {
+    display: none;
+}
+
+.submit {
+    width:330px;
+    height:46px;
+    line-height: 46px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    margin: 0 auto;
+    margin-top: 30px;
+    background:rgba(255,103,42,1);
+}
+
+.choice_shop_popup {
+    position: absolute;
+    top: 268px;
+    left: 50%;
+    margin-left: -166px;
+    width: 330px;
+    height: 222px;
+    border:1px solid rgba(232,232,232,1);
+    background-color: #fff;
+}
+
+.choice_shop_popup .masked {
+    display: none;
+}
+
+.choice_shop_popup .choice_shop {
+    top: 0;
+    left: 0;
+    margin-top:0;
+    width: 100%;
+    height: 100%;
+}
+
+.choice_shop_popup .choice_shop .top {
+    display: none;
+}
+
+.choice_shop .search_box {
+    padding: 10px;
+}
+
+.choice_shop .search_box input {
+    width: 290px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.choice_shop .search_box .placeholder {
+    margin-top: -10px;
+    margin-left: -60px;
+    width: 120px;
+    font-size: 15px;
+    color: #999;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.choice_shop .search_box .placeholder::after {
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/pc/search_btn.png);
+}
+
+.choice_shop .submit {
+    display: none;
+}
+
+.choice_shop .shop_label {
+    width: 100%;
+    height: 168px;
+    padding: 0;
+}
+
+.choice_shop .shop_label .merchant {
+    margin: 0;
+    padding: 0 10px;
+    width: -webkit-calc(100% - 20px);
+    width: -moz-calc(100% - 20px);
+    width: calc(100% - 20px);
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(232,232,232,1);
+}
+
+.choice_shop .shop_label .merchant.active {
+    color: #fff;
+    background-color: #FF672A;
+}
+
+.eye {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -5px;
+    width: 14px;
+    height: 10px;
+    background-image: url(../images/pc/eye.png);
+    -o-background-size: 100% 100%;
+       background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.eye.active {
+    background-image: url(../images/pc/eye_active.png);
+}
